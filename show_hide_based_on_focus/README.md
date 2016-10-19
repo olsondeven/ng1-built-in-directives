@@ -10,7 +10,7 @@ Only show each red tooltip when the associated input box is focused/selected. Se
 Basic examples of these directives have been included. If running these with live-server, run `live-server <name-of-file>`.
 
 ## Hint #1
-Choose a variable for each input box. Set this to true/false on blur/focus. 
+Choose a variable for each input box and set this to true/false on blur/focus. 
 
 ## Hint #2
 Show/hide the tooltips based on the variables you set to true/false. 
