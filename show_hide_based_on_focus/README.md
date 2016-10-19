@@ -1,7 +1,8 @@
 # Goal
 ___
 Only show each red tooltip when the associated input box is focused/selected. See what you can come up with on your own before looking at the hints/solution below.
-#### Directives
+
+#### Directives You Might Use
 ___
 - `ng-blur` - Specify an expression to evaluate when an element loses focus
 - `ng-focus` - Specify and expression to evaluate when an element is focused
