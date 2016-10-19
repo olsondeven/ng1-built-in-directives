@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<body ng-controller="myCtrl">
+		
+		<div ng-controller="myCtrl">
+            User Name: <input type="text" autofocus >
+            <span style="color:red">{{userText}}</span><br />
+            Password: <input type="text" >
+            <span style="color:red" >{{passwordText}}</span>
+        </div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script>
+			angular.module('myApp', [])
+				.controller('myCtrl', ['$scope', function($scope) {
+					$scope.userText = 'Input your username';
+					$scope.passwordText = '';
+					$scope.hideUserText = function(ans) {
+						if (ans == 'yes') {
+							$scope.userText = '';
+							$scope.passwordText = 'Input your password';
+						} else {
+							$scope.userText = 'Input your username';
+							$scope.passwordText = '';
+						}						
+					}
+					$scope.hidePasswordText = function(ans) {
+						if (ans == 'yes') {
+							$scope.passwordText = '';
+							$scope.userText = 'Input your username';
+						} else {
+							$scope.passwordText = 'Input your password';
+							$scope.userText = '';
+						}
+					}
+				}])
+				.directive('autofocus', ['$timeout', function ($timeout) {
+					return {
+						restrict: 'A',
+						link: function (scope, elem, attrs) {
+							$timeout(function() {
+								elem[0].focus();
+							})
+						}
+					};
+				}]);
+		</script>
+	</body>
+</html>

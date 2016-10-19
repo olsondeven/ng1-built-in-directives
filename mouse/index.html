@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="">
+
+<div ng-mouseenter="count = count + 1" ng-init="count=0">Mouse over me!</div>
+
+<h1>{{count}}</h1>
+
+<p>This example will increase the value of the variable "count" every time the mouse cursor enters the DIV element.</p>
+
+<div ng-mousedown="count2 = count2 + 1" ng-init="count2=0">Click me!</div>
+
+<h1>{{count2}}</h1>
+
+<p>This example will increase the value of the variable "count2" every time a mouse button is clicked on the DIV element.</p>
+
+<div ng-mouseleave="count3 = count3 + 1" ng-init="count3=0">Mouse over me! (and mouse away from me...)</div>
+
+<h1>{{count3}}</h1>
+
+<p>This example will increase the value of the variable "count3" every time the mouse cursor leaves the DIV element.</p>
+
+<div ng-mousemove="count4 = count4 + 1" ng-init="count4=0">Mouse over me!</div>
+
+<h1>{{count4}}</h1>
+
+<p>This example will increase the value of the variable "count4" every time the mouse cursor moves over the DIV element.</p>
+
+
+<div ng-mouseover="count5 = count5 + 1" ng-init="count5=0">Mouse over me!</div>
+
+<h1>{{count5}}</h1>
+
+<p>This example will increase the value of the variable "count5" every time the mouse cursor moves over the DIV element.</p>
+
+<div ng-mouseup="count6 = count6 + 1" ng-init="count6=0">Click me!</div>
+
+<h1>{{count6}}</h1>
+
+<p>This example will increase the value of the variable "count6" every time a mouse click on the DIV element is finished.</p>
+
+</body>
+</html>
+
