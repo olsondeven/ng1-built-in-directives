@@ -3,6 +3,14 @@
 #### Each folder contains a **basic** example of the directive. In the `index.html` file, you will be implement the directive in a more useful scenario. The skeleton of the code is provided so that you can focus on a particular directive.
 
 _________________________
+
+##### Brief Description of the Demos
+show_hide_based_on_focus - Show or hide tooltips based on where the cursor is focused
+
+
+
+
+_________________________
 ##### Brief Description of the Directives
 `ng-blur` - Specify an expression to evaluate when an element loses focus
 

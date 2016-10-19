@@ -6,19 +6,16 @@
     </head>
     <body ng-app="app">
         <div class="container">
-            <div ng-controller="myCtrl">
-                User Name: <input class="form-control" type="text" >
-                <span style="color:red" >Input your User name</span><br />
-                Password: <input class="form-control" type="text" n>
-                <span style="color:red" >Input your Password</span>
+            <div>
+                User Name: <input class="form-control" type="text">
+                <span style="color:red">Input your User name</span><br />
+                Password: <input class="form-control" type="text">
+                <span style="color:red">Input your Password</span>
             </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
         <script>
             angular.module("app", [])
-                .controller('myCtrl', ['$scope', function ($scope) {
-            
-                }]);
         </script>
     </body>
 </html>

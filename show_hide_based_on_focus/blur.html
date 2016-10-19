@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<body ng-controller="myCtrl">
+
+		<input ng-blur="count = count + 1"/>
+		
+		<h1>{{count}}</h1>
+		
+		<p>This example will increase the value of the variable "count" every time the input field loses focus.</p>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script>
+			angular.module('myApp', [])
+				.controller('myCtrl', ['$scope', function($scope) {
+					$scope.count = 0;
+				}]);
+		</script>
+	</body>
+</html>
