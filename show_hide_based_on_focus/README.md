@@ -1,9 +1,7 @@
 # Goal
-___
 Only show each red tooltip when the associated input box is focused/selected. See what you can come up with on your own before looking at the hints/solution below.
 
-#### Directives You Might Use
-___
+## Directives You Might Use
 - `ng-blur` - Specify an expression to evaluate when an element loses focus
 - `ng-focus` - Specify and expression to evaluate when an element is focused
 - `ng-show` - If the expression is truthy then the element is shown or hidden respectively
@@ -11,16 +9,13 @@ ___
 
 Basic examples of these directives have been included. If running these with live-server, run `live-server <name-of-file>`.
 
-#### Hint #1
-___
+## Hint #1
 Choose a variable for each input box. Set this to true/false on blur/focus. 
 
-#### Hint #2
-___
+## Hint #2
 Show/hide the tooltips based on the variables you set to true/false. 
 
-#### Solution
-___
+## Solution
 ```html
 <div>
     User Name: <input class="form-control" type="text" ng-focus="userName=true" ng-blur="userName=false">
