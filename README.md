@@ -6,3 +6,5 @@ In addition to the `index.html` file, you will find basic examples of the releva
 ## Brief Description of the Demos
 **show_hide_based_on_focus** - Show or hide tooltips based on where the cursor is focused
 - `ng-focus`, `ng-blur`, `ng-show`/`ng-hide`
+**update_based_on_change** - Display the currently selected item
+- `ng-change`, `ng-model`, `ng-show`/`ng-hide`
