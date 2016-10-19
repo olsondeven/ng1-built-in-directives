@@ -3,6 +3,5 @@ Each folder contains a useful result accomplished by using Angular's built-in di
 
 In addition to the `index.html` file, you will find basic examples of the relevant directives. To run these via `live-server`, use the command `live-server <name-of-file>`.
 
-##### Brief Description of the Demos
-___
+## Brief Description of the Demos
 **show_hide_based_on_focus** - Show or hide tooltips based on where the cursor is focused
