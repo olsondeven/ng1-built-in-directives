@@ -48,13 +48,13 @@ _________________________
 
 `ng-list` - Specify a delimiter to convert between a delimited string and an array of strings
 
-`ng-model` - Bind an `input`, `select`, `textarea` (or custom form control) to a property on the $scope. (Use `ng-model-options to modify the behavior of ngModel.)
+`ng-model` - Bind an `input`, `select`, `textarea` (or custom form control) to a property on the $scope. (Use `ng-model-options` to modify the behavior of ngModel.)
 
 `ng-mousedown`/`ng-mouseenter`/`ng-mouseleave`/`ng-mousemove`/`ng-mouseover`/`ng-mouseup` - Specify an expresson to evaluate on mousedown/mouseenter/mouseleave/mousemove/mouseover/mouseup
 
 `ng-open` - If the expression is truthy, then special attribute "open" will be set on the element (useful for collapsing/expanding an element's contents)
 
-`ng-options` - Dynamically generate a list of <option> elements for the <select> element
+`ng-options` - Dynamically generate a list of \<option> elements for the \<select> element
 
 `ng-paste` - Specify an expression to evaluate when the contents of an element are pasted
 
