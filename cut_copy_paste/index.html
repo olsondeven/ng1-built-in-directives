@@ -1,0 +1,39 @@
+<html >
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+</head>
+<body ng-app="app">
+    <div ng-controller="controllerName">
+        <label>Try to cut/copy: <input ng-model="data"/></label>
+	   <button ng-click="randomString()">New string</button>
+        <br>
+        <label>And paste it here: <input type="text"></label>
+        <hr>
+        <label>You can't paste anything here: <input ng-model="typing"></label>
+        {{typing}}
+    </div>
+<script>
+	var app = angular.module("app", []);
+	app.controller('controllerName', ['$scope', function ($scope) {
+		// generate a random string so you know for sure if you cut/copied the string or not.
+		$scope.randomString = function () {
+			var text = "";
+			var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+			for( var i=0; i < 5; i++ )
+				text += possible.charAt(Math.floor(Math.random() * possible.length));
+			$scope.data = text;
+		};
+
+		$scope.randomString();
+
+		$scope.cheating = function ($event) {
+			console.log($event);
+			alert("You can't "+ $event.type + " data! Bwahaha")
+			$event.preventDefault();
+		};
+		
+    }]);
+</script>
+</body>
+</html>
