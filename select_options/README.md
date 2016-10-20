@@ -7,7 +7,6 @@ Initialize the country \<select> to India, and set the options for the state \<s
 | ---- | ----------- |
 |`ng-selected`| If the expression is truthy, then special attribute "selected" will be set on the element |
 |`ng-options`| Dynamically generate a list of \<option> elements for the \<select> element |
-|`ng-model`| Bind an `input`, `select`, `textarea` to a property on the $scope |
 |`ng-init`| Evaluate an expression in the current $scope when the element is initialized |
 
 Basic examples of these directives have been included. If running these with live-server, run `live-server <name-of-file>`.
