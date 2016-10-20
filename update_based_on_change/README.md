@@ -2,9 +2,11 @@
 Update the view to display the selected choice (if one is selected). See what you can come up with on your own before looking at the hints/solution below.
 
 ## Directives You Might Use
-- `ng-change` - Specify an expression to evaluate upon change in input value
-- `ng-model` - Bind an `input`, `select`, `textarea` to a property on the $scope.
-- `ng-show` - If the expression is truthy then the element is shown or hidden respectively
+| Name | Description |
+| ---- | ----------- |
+|`ng-change`| Specify an expression to evaluate upon change in input value |
+|`ng-model`| Bind an `input`, `select`, `textarea` to a property on the $scope. |
+|`ng-show`| If the expression is truthy then the element is shown or hidden respectively |
 
 Basic examples of these directives have been included. If running these with live-server, run `live-server <name-of-file>`.
 
