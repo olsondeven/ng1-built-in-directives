@@ -1,5 +1,5 @@
 # Goal
-Convert inputs separated by commas, newlines, or spaces into arrays.
+Convert inputs separated by commas, newlines, or spaces into arrays. On the last one, don't update $scope until the input box loses focus.
 
 ## Directives You Might Use
 | Name | Description |
@@ -31,8 +31,8 @@ The newline character is represented by `&#10;`.
 </div>
 <hr>
 <div>
-	<p>Write your full name</p>
-	<label>Name: <input type="text" ng-trim="false" ng-model="name" ng-list=" "></label>
+	<p>Write your full name, then click anywhere outside of the input box</p>
+	<label>Name: <input type="text" ng-trim="false" ng-model="name" ng-model-options="{updateOn: 'blur'}" ng-list=" "></label>
 	<p>{{name}}</p>
 </div>
 ```
