@@ -11,4 +11,4 @@ In addition to the `index.html` file, you will find basic examples of the releva
 - `ng-change`, `ng-model`, `ng-show`/`ng-hide`
 
 **convert_input_to_array** - Convert user input into a Javascript array
-- `ng-model`, `ng-list`
+- `ng-model`, `ng-list`, `ng-trim`
