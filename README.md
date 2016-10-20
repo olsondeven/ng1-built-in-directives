@@ -16,3 +16,6 @@ In addition to the `index.html` file, you will find basic examples of the releva
 
 **select_options** - Keep html clean with `ng-options` and choose default selections in two connected `select` fields.
 - `ng-options`, `ng-selected`, `ng-model`
+
+**styling** - Show a loading spinner while waiting for data, then style the elements dynamically/conditionally
+- `ng-show`/`ng-hide`, `ng-style`, `ng-class`/`ng-class-even`/`ng-class-odd`

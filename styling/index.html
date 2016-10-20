@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	</head>
+	<style>
+		.round {
+			border-radius: 50%;
+			border: solid #000;
+			height: 100px;
+			width: 100px;
+		}
+		.sm {
+			border: solid blue;
+			height: 100px;
+			width: 100px;
+		}
+		.md {
+			border: solid green;
+			height: 200px;
+			width: 200px;
+		}
+		.lg {
+			border: solid red;
+			height: 300px;
+			width: 300px;
+		}
+	</style>
+	<body ng-app="myApp">
+		
+		<div ng-controller="myCtrl" ng-init="boxSize='sm'">
+			<h1 id='loading'>Your images are loading <i class="fa fa-spin fa-spinner"></i></h1>
+
+			<div id="data">
+				<select ng-model="boxSize" >
+					<option value="sm">small</option>
+					<option value="md">medium</option>
+					<option value="lg">large</option>
+				</select>
+
+			
+				<div ng-style="{'display':'flex'}">
+					<div class="set1" id="front">
+					</div>
+					<div class="set1" id="back">
+					</div>
+					<div class="set1" id="front-shiny">
+					</div>
+					<div class="set1" id="back-shiny">
+					</div>
+				</div>
+				<hr>
+			
+				<div ng-style="{'display':'flex'}">
+					<div id="pictures" ng-repeat="pic in all">
+						<div class="set2" id="picture">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+		<script>
+		angular.module('myApp',[])
+			.controller('myCtrl', function($scope, mySvc) {
+				$scope.msg = 'ctrl loaded'
+				$scope.getPhotos = function() {
+					mySvc.getPhotos().then(function(resp) {
+						console.log('done');
+						// these variables are the urls for the images
+						$scope.front = resp.front_default;
+						$scope.back = resp.back_default;
+						$scope.frontShiny = resp.front_shiny;
+						$scope.backShiny = resp.back_shiny;
+						
+						$scope.all = [$scope.front, $scope.back, $scope.frontShiny, $scope.backShiny];
+					})
+				}
+
+				$scope.getPhotos(); 
+			})
+			.service('mySvc', function($http) {
+				this.getPhotos = function() {
+					console.log('fetching');
+					return $http.get('http://pokeapi.co/api/v2/pokemon/squirtle')
+						.then(function(resp) {
+							return resp.data.sprites;
+						})
+				}
+			})
+		</script>
+	
+	</body>
+</html>
