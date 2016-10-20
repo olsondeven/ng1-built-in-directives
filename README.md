@@ -12,3 +12,7 @@ In addition to the `index.html` file, you will find basic examples of the releva
 
 **convert_input_to_array** - Convert user input into a Javascript array
 - `ng-model`, `ng-list`, `ng-trim`
+
+
+**select_options** - Keep html clean with `ng-options` and choose default selections in two connected `select` fields.
+- `ng-options`, `ng-selected`, `ng-model`

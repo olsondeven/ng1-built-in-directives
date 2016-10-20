@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+</head>
+<body>
+    <div ng-controller="myCtrl">
+    Country <select ng-model="Country">
+        <option value="India">India</option>
+        <option value="Canada">Canada</option>
+    </select><br /><br />
+    State <select ng-model="(States | filter: Country)[0].Name">
+    </select>
+</div>
+<script>
+    var app = angular.module("myApp", []);
+    app.controller('myCtrl', ['$scope', function ($scope) {
+        $scope.States = [
+        { Name: 'Arunachal Pradesh', country: 'India' }, { Name: 'Punjab', country: 'India' }, { Name: 'Rajasthan', country: 'India' }, { Name: 'Andhra Pradesh', country: 'India' }, { Name: 'Assam', country: 'India' }, { Name: 'Bihar', country: 'India' }, { Name: 'Chhattisgarh', country: 'India' }, { Name: 'Goa', country: 'India' }, { Name: 'Gujarat', country: 'India' }, { Name: 'Haryana', country: 'India' }, { Name: 'Himachal Pradesh', country: 'India' }, { Name: 'Jammu and Kashmir', country: 'India' }, { Name: 'Jharkhand', country: 'India' }, { Name: 'Karnataka', country: 'India' }, { Name: 'Kerala', country: 'India' }, { Name: 'Madhya Pradesh', country: 'India' }, { Name: 'Maharashtra', country: 'India' }, { Name: 'Manipur', country: 'India' }, { Name: 'Meghalaya', country: 'India' }, { Name: 'Mizoram', country: 'India' }, { Name: 'Nagaland', country: 'India' }, { Name: 'Odisha', country: 'India' }, { Name: 'Rajasthan', country: 'India' }, { Name: 'Sikkim', country: 'India' }, { Name: 'Tamil Nadu', country: 'India' }, { Name: 'Telangana', country: 'India' }, { Name: 'Tripura', country: 'India' }, { Name: 'Uttar Pradesh', country: 'India' }, { Name: 'Uttarakhand', country: 'India' }, { Name: 'West Bengal', country: 'India' }, { Name: 'Quebec', country: 'Canada' }, { Name: 'Manitoba', country: 'Canada' }, { Name: 'Ontario', country: 'Canada' }, { Name: 'Nova Scotia', country: 'Canada' }, { Name: 'New Brunswick', country: 'Canada' }, { Name: 'British Columbia', country: 'Canada' }, { Name: 'Prince Edward Island', country: 'Canada' }, { Name: 'Saskatchewan', country: 'Canada' }, { Name: 'Alberta', country: 'Canada' }, { Name: 'Newfoundland', country: 'Canada' }];
+    }]);
+</script>
+</body>
+</html>
