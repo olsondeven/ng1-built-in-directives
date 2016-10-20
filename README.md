@@ -10,7 +10,7 @@ In addition to the `index.html` file, you will find basic examples of the releva
 **update_based_on_change** - Display the currently selected item
 - `ng-change`, `ng-model`, `ng-show`/`ng-hide`
 
-**convert_input_to_array** - Convert user input into a Javascript array
+**convert_input_to_array** - Convert user input from a string into a Javascript array of strings
 - `ng-model`, `ng-list`, `ng-trim`
 
 
