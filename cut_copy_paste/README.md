@@ -13,7 +13,7 @@ Prevent a user from cutting/copying/pasting text in the \<input> fields.
 Basic examples of these directives have been included. If running these with live-server, run `live-server <name-of-file>`.
 
 ## Hint #1
-Invoke the `cheating` function on cut/copy/paste.
+Invoke the `cheating` function on cut/copy/paste, passing in `$event`.
 
 ## Solution
 ```html
