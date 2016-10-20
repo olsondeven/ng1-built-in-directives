@@ -6,13 +6,13 @@
 
 
 ## Directives You Might Use
-| Name | Description |
-| ---- | ----------- |
-|`ng-show`| If the expression is truthy then the element is shown or hidden respectively |
-|`ng-hide`| If the expression is truthy then the element is shown or hidden respectively |
-|`ng-style`| Specify an expression which evaluates to an object whose keys are CSS style names and values are corresponding values for those CSS keys. |
-|`ng-class`| Dynamically set CSS classes on an element by binding an expression that represents all classes to be added |
-|`ng-init`| Evaluate an expression in the current $scope when the element is initialized |
+|  Name  | Description |
+| ------ | ----------- |
+|`ng-show` | If the expression is truthy then the element is shown or hidden respectively |
+|`ng-hide` | If the expression is truthy then the element is shown or hidden respectively |
+|`ng-style` | Specify an expression which evaluates to an object whose keys are CSS style names and values are corresponding values for those CSS keys. |
+|`ng-class` | Dynamically set CSS classes on an element by binding an expression that represents all classes to be added |
+|`ng-init` | Evaluate an expression in the current $scope when the element is initialized |
 
 Basic examples of these directives have been included. If running these with live-server, run `live-server <name-of-file>`.
 
