@@ -2,10 +2,12 @@
 Only show each red tooltip when the associated input box is focused/selected. See what you can come up with on your own before looking at the hints/solution below.
 
 ## Directives You Might Use
-- `ng-blur` - Specify an expression to evaluate when an element loses focus
-- `ng-focus` - Specify and expression to evaluate when an element is focused
-- `ng-show` - If the expression is truthy then the element is shown or hidden respectively
-- `ng-hide` - If the expression is truthy then the element is shown or hidden respectively
+| Name | Description |
+| ---- | ----------- |
+|`ng-blur`| Specify an expression to evaluate when an element loses focus |
+|`ng-focus`| Specify and expression to evaluate when an element is focused |
+|`ng-show`| If the expression is truthy then the element is shown or hidden respectively |
+|`ng-hide`| If the expression is truthy then the element is shown or hidden respectively |
 
 Basic examples of these directives have been included. If running these with live-server, run `live-server <name-of-file>`.
 
