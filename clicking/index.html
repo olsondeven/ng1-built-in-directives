@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body ng-controller="mainCtrl">
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-md-12">
+				<br />
+				<button class="btn btn-success">Details</button>
+				<button class="btn btn-success">Hide</button>
+				<br />
+				<div class="details" style="border: solid black">
+					<div style="padding:40px">
+						<p>LearnKode is a website for Beginner and Professional to learn AngularJS step by step and the biggest advantage is that while learning you can experiment your code Online.</p>
+						<p>Check us out at</p>
+						<p><a href="www.learnkode.com" title="">www.learnkode.com</a> </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div>
+		Double click to select a winner: <br />
+		<select size="6" ng-model="winner" ng-options="employee as employee.name for employee in employees"></select>
+		<form>
+			<label>Employee Name: <input type="text" ng-model="chosen.name" required></label><br>
+			<label>Employee Email: <input type="email" ng-model="chosen.email" required></label><br>
+			<label>Years of Experience: <input type="text" ng-model="chosen.experience" required></label><br>
+			<button type="submit">Confirm Winner Selection</button>
+		</form>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+		var app = angular.module("app", []);
+		app.controller('mainCtrl', ['$scope', function ($scope) {
+			$scope.slideDown = function () {
+				$('.details').slideDown('slow')
+
+			}
+			$scope.slideUp = function () {
+				$('.details').slideUp('slow')
+					
+			}
+
+			$scope.employees = [
+				{ name: 'John Smith', email: 'john@smith.com', experience: 4 },
+				{ name: 'Jane Doe' , email: 'jane@doe.com', experience: 5},
+				{ name: 'Peter Knox' , email: 'peter@knox.com', experience: 1},
+				{ name: 'Josh Mikelson' , email: 'josh@mikelson', experience: 3} ,
+				{ name: 'Stephanie Lewis', email: 'stephanie@lewis.com', experience: 4 }
+			];
+		
+			$scope.dblClick = function (employee) {
+				$scope.chosen = {
+					name: employee.name,
+					email: employee.email,
+					experience: employee.experience
+				}
+			}
+
+			$scope.submit = function (name) {
+				alert('You have chosen ' + name + ' as the winner!')
+			}
+		}]);
+	</script>
+</body>
+</html>
