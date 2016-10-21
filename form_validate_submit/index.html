@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+	<style>
+		.warn {
+			color: red;
+		}
+	</style>
+</head>
+<body ng-controller="mainCtrl">
+	<div>
+		<form name="myForm">
+			<label>User Name: <input class="form-control" type="text" name="uname" required></label>
+			<br>
+			<span class="warn">Username is required!</span>
+			<br />
+			<label>Password: <input class="form-control" type="password" name="password" required minlength="5"></label>
+			<br>
+			<span class="warn">Password is required!</span>
+			<span class="warn">Password is too short!</span>
+			<br />
+			<button class="btn">Save</button>
+		</form>
+	</div>
+	<div id="submitted">
+		User: {{submittedUser}}
+	</div>
+	
+	<script>
+	var app = angular.module("app", []);
+	app.controller('mainCtrl', ['$scope', function ($scope) {
+		$scope.submit = function (user) {
+			$scope.submittedUser = user;
+		}		
+    }]);
+
+	</script>
+
+</body>
+</html>

@@ -22,3 +22,6 @@ In addition to the `index.html` file, you will find basic examples of the releva
 
 **cut_copy_paste** - Prevent users from using cut/copy/paste.
 -`ng-cut`, `ng-copy`, `ng-paste`
+
+**form_validation_submission** - Show errors if the form is not valid and don't allow form submission. 
+- `ng-submit`, `ng-disabled`, `ng-model`, `ng-show`, `ng-if`
