@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+	<body ng-controller="myCtrl">
+		
+		<form ng-submit="submit()">
+			<label>Account Type: <br>
+				<input type="radio" name="type"> Admin 
+				<input type="radio" name="type"> User
+			</label> <br>
+			<label>Name: <input type="text" class="form-control" ng-model="name"></label><br>
+			<label>Email: <input type="email" class="form-control" ng-model="email"></label><br>
+			<label>Account # (office use only): <input type="text" class="form-control"></label><br>
+			<input type="checkbox" ng-model="subscribe"> Send me tons of unnecessary junk mail. <br>
+			<button type="submit" class="btn btn-success">Submit</button>
+		</form>
+		
+
+		<script>
+			angular.module('myApp', [])
+				.controller('myCtrl', function($scope) {
+					$scope.admin = false;
+					$scope.acctNum = 123456789;
+
+					$scope.submit = function () {
+						alert('submitted');
+						$scope.admin = false;
+						$scope.name = '';
+						$scope.email = '';
+					}
+				});
+		</script>
+
+	</body>
+</html>

@@ -16,6 +16,9 @@ In addition to the `index.html` file, you will find basic examples of the releva
 **form_validation_submission** - Show errors if the form is not valid and don't allow form submission. 
 - `ng-submit`, `ng-disabled`, `ng-model`, `ng-show`, `ng-if`
 
+**input_attributes** - Set conditional attributes on \<input> elements
+- `ng-value`, `ng-required`, `ng-readonly`, `ng-checked`, `ng-model`
+
 **select_options** - Keep html clean with `ng-options` and choose default selections in two connected `select` fields.
 - `ng-options`, `ng-selected`, `ng-model`
 
