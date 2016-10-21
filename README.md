@@ -22,7 +22,7 @@ In addition to the `index.html` file, you will find basic examples of the releva
 **input_attributes** - Set conditional attributes on \<input> elements
 - `ng-value`, `ng-required`, `ng-readonly`, `ng-checked`, `ng-model`
 
-**key_mouse** - Key and mouse events
+**key_mouse** - Restrict entry to numeric values, and limit the length of the input
 - `ng-keydown`/`ng-keyup`/`ng-keypress`, `ng-mousedown`/`ng-mouseenter`/`ng-mouseleave`/`ng-mousemove`/`ng-mouseover`/`ng-mouseup`
 
 **open_details** - Expand/collapse lists conditionally
