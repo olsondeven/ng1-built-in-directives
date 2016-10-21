@@ -19,6 +19,9 @@ In addition to the `index.html` file, you will find basic examples of the releva
 **input_attributes** - Set conditional attributes on \<input> elements
 - `ng-value`, `ng-required`, `ng-readonly`, `ng-checked`, `ng-model`
 
+**open_details** - Expand/collapse lists conditionally
+- `ng-open`, `ng-model`
+
 **select_options** - Keep html clean with `ng-options` and choose default selections in two connected `select` fields.
 - `ng-options`, `ng-selected`, `ng-model`
 
