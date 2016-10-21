@@ -25,3 +25,6 @@ In addition to the `index.html` file, you will find basic examples of the releva
 
 **form_validation_submission** - Show errors if the form is not valid and don't allow form submission. 
 - `ng-submit`, `ng-disabled`, `ng-model`, `ng-show`, `ng-if`
+
+**clicking** - Toggle display and autofill a form on click events
+- `ng-click`, `ng-dblclick`, `ng-disabled`
