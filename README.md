@@ -7,6 +7,9 @@ In addition to the `index.html` file, you will find basic examples of the releva
 **clicking** - Toggle display and autofill a form on click events
 - `ng-click`, `ng-dblclick`, `ng-disabled`
 
+**conditional_DOM - create DOM elements conditionally
+- `ng-switch`, `ng-if`, `ng-class`
+
 **convert_input_to_array** - Convert user input from a string into a Javascript array of strings
 - `ng-model`, `ng-list`, `ng-trim`
 

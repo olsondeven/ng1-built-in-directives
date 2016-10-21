@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<style>
+    .menu:hover {
+        background-color: white;
+        cursor: pointer;
+        height: 30px;
+    }
+
+    .menu {
+        height: 30px;
+        color: gray;
+        background-color: orange;
+    }
+
+    .active {
+        background-color: pink;
+        color: black;
+    }
+
+        .active:hover {
+            background-color: pink;
+        }
+</style>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="myCtrl">
+        <div class="container">
+            <div class="well col-md-11">
+                <div id="header" class="row">
+                    <div class="col-md-1 menu" ng-click="tab='Angular'"><b>Angular</b></div>
+                    <div class="col-md-1 menu" ng-click="tab='Jquery'"><b>Jquery</b></div>
+                    <div class="col-md-1 menu" ng-click="tab='Bootstrap'"><b>Bootstrap</b></div>
+                    <div class="col-md-1 menu" ng-click="tab=''"><b>Other</b></div>
+                </div>
+                <div id="content" class="row">
+                    <div class="col-md-4" style="background-color:yellow">
+                        <h3>Angular JS</h3><br />
+                        HTML is great for declaring static documents, but it falters when we try to use it for declaring dynamic views in web-applications. AngularJS lets you extend HTML vocabulary for your application. The resulting environment is extraordinarily expressive, readable, and quick to develop.
+                    </div>
+                    <div class="col-md-4" style="background-color:yellow">
+                        <h3>Jquery</h3><br />
+                        jQuery is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML. jQuery is the most popular JavaScript library in use today, with installation on 65% of the top 10 million highest-trafficked sites on the Web. jQuery is free, open-source software licensed under the MIT License.
+                    </div>
+                    <div class="col-md-4" style="background-color:yellow">
+                        <h3>Bootstrap</h3><br />
+                        Bootstrap is a technique of loading a program into a computer by means of a few initial instructions which enable the introduction of the rest of the program from an input device.
+                    </div>
+                    <div class="col-md-4" style="background-color:yellow">
+                        <h3>Other</h3><br />
+                        Choose your own advendure!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    var app = angular.module("myApp", []);
+    app.controller('myCtrl', ['$scope', function ($scope) {
+    }]);
+</script>
+</body>
+</html>
