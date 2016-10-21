@@ -20,7 +20,7 @@ In addition to the `index.html` file, you will find basic examples of the releva
 **styling** - Show a loading spinner while waiting for data, then style the elements dynamically/conditionally
 - `ng-show`/`ng-hide`, `ng-style`, `ng-class`/`ng-class-even`/`ng-class-odd`
 
-**cut_copy_paste** - Prevent users from using cut/copy/paste.
+**cut_copy_paste** - Prevent users from using cut/copy/paste
 -`ng-cut`, `ng-copy`, `ng-paste`
 
 **form_validation_submission** - Show errors if the form is not valid and don't allow form submission. 
