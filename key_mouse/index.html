@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<title></title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+	</head>
+	<body ng-app="app">
+		<div ng-controller="myController">
+			<h3>Numeric TextBox Validation on Keydown</h3>
+			Age: <input type="text"/>
+		</div>
+		<script>
+		var app = angular.module("app", []);
+		app.controller('myController', ['$scope', function ($scope) {
+			$scope.isNumeric = function (e) {
+			if (!((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || (e.keyCode == 8))) {
+
+				}
+			}
+
+			var len = 0;
+			$scope.checkLength = function (e) {
+				if (((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || (e.keyCode == 8))) {
+						len++;
+				}
+
+				
+				
+			}
+
+		}]);
+		</script>
+	</body>
+</html>

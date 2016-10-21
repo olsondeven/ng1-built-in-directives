@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="">
+
+<input ng-keydown="count = count + 1" ng-init="count=0" />
+
+<h1>{{count}}</h1>
+
+<p>This example will increase the value of the variable "count" every time a key is pressed in the input field.</p>
+
+<input ng-keyup="count2 = count2 + 1" ng-init="count2=0" />
+
+<h1>{{count2}}</h1>
+
+<p>This example will increase the value of the variable "count2" every time a keypress in the input field is finished.</p>
+
+</body>
+</html>
+
