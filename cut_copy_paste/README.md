@@ -1,6 +1,7 @@
 # Goal
 Prevent a user from cutting/copying/pasting text in the \<input> fields.
 
+![Result] (http://i.giphy.com/KieBlVQ9qf2Tu.gif)
 
 ## Directives You Might Use
 |  Name  | Description |
