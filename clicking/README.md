@@ -2,8 +2,6 @@
 - Toggle data display on button click. Make sure you disable a button if it's effect is already the current state. 
 - Autofill the form by double clicking on one of the employees and call the submit function when you click the confirm button.
 
-
-
 Part 1 | Part 2
 :----: | :----:
 ![Part 1](http://i.giphy.com/zQ3qRbCjj0nbG.gif "Part 1") | ![Part 2](http://i.giphy.com/4pHkfgCicvd7i.gif "Part 2")
