@@ -1,6 +1,8 @@
 # Goal
 Connect the account type to the value of `$scope.admin`. For users, the email is required, account # is readonly, and the subscription is checked. For admin, the email is readonly, and the subscription is unchecked.
 
+![Result] (http://i.giphy.com/RyhrjWkspxK12.gif)
+
 ## Directives You Might Use
 |  Name  | Description |
 | ------ | ----------- |
