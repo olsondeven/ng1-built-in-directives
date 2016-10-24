@@ -1,6 +1,8 @@
 # Goal
 Only show each red tooltip when the associated input box is focused/selected. See what you can come up with on your own before looking at the hints/solution below.
 
+![Result](http://i.giphy.com/LWpxizi6xanja.gif)
+
 ## Directives You Might Use
 | Name | Description |
 | ---- | ----------- |
