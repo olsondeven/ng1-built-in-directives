@@ -1,6 +1,8 @@
 # Goal
 When the form is invalid, show the warnings and disable the button. When the form is valid, do not show the warnings, and on submission, display the saved user.
 
+![Result] (http://i.giphy.com/yFzpR80HvfTFu.gif)
+
 ## Directives You Might Use
 |  Name  | Description |
 | ------ | ----------- |
