@@ -1,6 +1,8 @@
 # Goal
 Use the checkbox to open/close all lists.
 
+![Result](http://i.giphy.com/41q9DMP8M4STS.gif)
+
 ## Directives You Might Use
 | Name | Description |
 | ---- | ----------- |
