@@ -4,6 +4,10 @@
 - Add the class that corresponds to the selected option onto the `set1` images.
 -  Assign the class of `round` to the even items in the `set2` class, and the class of `sm` to the odd items.
 
+Loading | Styling
+-------- | -------
+![Part 1](http://i.giphy.com/QDRdzYtRxaANO.gif) | ![Part 2](http://i.giphy.com/uASw3GMENNtJu.gif)
+
 
 ## Directives You Might Use
 |  Name  | Description |
