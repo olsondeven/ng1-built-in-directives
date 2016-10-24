@@ -1,6 +1,10 @@
 # Goal
 Convert inputs separated by commas, newlines, or spaces into arrays. On the last one, don't update $scope until the input box loses focus.
 
+Part 1 | Part 2 | Part 3
+------ | ------ | ------
+![Part 1] (http://i.giphy.com/qpAafHdscYbba.gif) | ![Part 2](http://i.giphy.com/BnvPPtjh0uoCY.gif) | ![Part 3] (http://i.giphy.com/P6I4c7UlqraxO.gif)
+
 ## Directives You Might Use
 | Name | Description |
 | ---- | ----------- |
