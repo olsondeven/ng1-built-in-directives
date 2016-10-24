@@ -1,7 +1,7 @@
 # Goal
 Prevent users from typing in non-numeric values, and limit the length of the input to 2.
 
-![Result](http://i.giphy.com/xy0NtEGFIZLoY.gif)
+![Result](http://i.giphy.com/FybgHxyxwgOR2.gif)
 
 ## Directives You Might Use
 | Name | Description |
