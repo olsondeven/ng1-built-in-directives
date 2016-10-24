@@ -12,22 +12,35 @@
 		<script>
 		var app = angular.module("app", []);
 		app.controller('myController', ['$scope', function ($scope) {
-			$scope.isNumeric = function (e) {
-			if (!((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || (e.keyCode == 8))) {
-
-				}
-			}
-
 			var len = 0;
-			$scope.checkLength = function (e) {
-				if (((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || (e.keyCode == 8))) {
-						len++;
+			$scope.isNumeric = function (e) {
+				// if the key is NOT a number NOR backspace
+				if (!((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || (e.keyCode == 8))) {
+					console.log('keypressed: ', e.key);
+					console.log('length:', len);
+
 				}
-
-				
-				
 			}
-
+			$scope.checkLength = function (e) {
+				// if the key IS a number and the length is less than 2
+				if (((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105)) && len < 2) {
+					len++;
+					console.log('keypressed: ', e.key);
+					console.log('length:', len);
+				}
+				// if the key is backspace and length > 0
+				else if (e.keyCode == 8 && len > 0) {
+					len--;
+					console.log('keypressed: ', e.key);
+					console.log('length:', len);
+				}
+				// if the length is already 2
+				else if (len == 2) {
+					console.log('keypressed: ', e.key);
+					console.log('length:', len);
+					
+				}
+			}
 		}]);
 		</script>
 	</body>

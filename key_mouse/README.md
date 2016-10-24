@@ -1,6 +1,8 @@
 # Goal
 Prevent users from typing in non-numeric values, and limit the length of the input to 2.
 
+![Result](http://i.giphy.com/xy0NtEGFIZLoY.gif)
+
 ## Directives You Might Use
 | Name | Description |
 | ---- | ----------- |
@@ -10,10 +12,10 @@ Prevent users from typing in non-numeric values, and limit the length of the inp
 Basic examples of these directives have been included. If running these with live-server, run `live-server <name-of-file>`.
 
 ## Hint #1
-Call both functions on keydown and pass in `$event`.
+Call both functions on keydown (separated by a `;`) and pass in `$event`.
 
 ## Hint #2
-Prevent the default behavior of the event using `e.preventDefault()`.
+If the key was non-numeric or the length is already 2, prevent the default behavior of the event using `e.preventDefault()`.
 
 ## Solution
 ```html
@@ -25,16 +27,30 @@ Prevent the default behavior of the event using `e.preventDefault()`.
 
 ```javascript
 $scope.isNumeric = function (e) {
+	// if the key is NOT a number NOR backspace
 	if (!((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || (e.keyCode == 8))) {
-		 e.preventDefault();
+		console.log('keypressed: ', e.key);
+		console.log('length:', len);
+		e.preventDefault();
 	}
 }
-var len = 0;
 $scope.checkLength = function (e) {
-	if (((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || (e.keyCode == 8))) {
+	// if the key IS a number and the length is less than 2
+	if (((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105)) && len < 2) {
 		len++;
+		console.log('keypressed: ', e.key);
+		console.log('length:', len);
 	}
-	if (len > 2) {
+	// if the key is backspace and length > 0
+	else if (e.keyCode == 8 && len > 0) {
+		len--;
+		console.log('keypressed: ', e.key);
+		console.log('length:', len);
+	}
+	// if the length is already 2
+	else if (len == 2) {
+		console.log('keypressed: ', e.key);
+		console.log('length:', len);
 		e.preventDefault();
 	}
 }
