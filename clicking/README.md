@@ -16,7 +16,7 @@ Basic examples of these directives have been included. If running these with liv
 Show the details div when you click the Details button. Hide it when you click the Hide button.
 
 ## Hint #2
-Disable the buttons based on the truthy-ness or falsy-ness of the $scope variable `visible` which should be set in the `slideDown` and `slideUp` functions.
+Disable the buttons based on the truthy-ness or falsy-ness of the $scope variable `visible` which should be toggled in the `slide` function.
 
 ## Hint #3
 Pass in the `winner` to the `dblClick` function on the \<select> element, and pass in the name of the winner (whether autofilled or manually entered) to the `submit` function.
@@ -29,8 +29,8 @@ Pass in the `winner` to the `dblClick` function on the \<select> element, and pa
 		<div class="row text-center">
 			<div class="col-md-12">
 				<br />
-				<button class="btn btn-success">Details</button>
-				<button class="btn btn-success">Hide</button>
+				<button class="btn btn-success" ng-disabled="!visible" ng-click="slide()">Details</button>
+				<button class="btn btn-success" ng-disabled="visible" ng-click="slide()">Hide</button>
 				<br />
 				<div class="details" style="border: solid black">
 					<div style="padding:40px">
@@ -57,13 +57,9 @@ Pass in the `winner` to the `dblClick` function on the \<select> element, and pa
 	<script>
 		var app = angular.module("app", []);
 		app.controller('mainCtrl', ['$scope', function ($scope) {
-			$scope.slideDown = function () {
-				$('.details').slideDown('slow')
-				$scope.visible = false;
-			}
-			$scope.slideUp = function () {
-				$('.details').slideUp('slow')
-				$scope.visible = true;
+			$scope.slide = function () {
+				$('.details').slideToggle('slow')
+				$scope.visible = !$scope.visible;
 			}
 
 			$scope.employees = [

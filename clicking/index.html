@@ -38,13 +38,9 @@
 	<script>
 		var app = angular.module("app", []);
 		app.controller('mainCtrl', ['$scope', function ($scope) {
-			$scope.slideDown = function () {
-				$('.details').slideDown('slow')
-
-			}
-			$scope.slideUp = function () {
-				$('.details').slideUp('slow')
-					
+			$scope.slide = function () {
+				$('.details').slideToggle('slow')
+				
 			}
 
 			$scope.employees = [
