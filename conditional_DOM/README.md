@@ -1,6 +1,8 @@
 # Goal
 Apply the `active` class to the selected `menu` class item, and display the appropriate content based on the value of `tab`. This can be accomplished using either `ng-switch` or `ng-if`. Try doing it both ways!
 
+![Result] (http://i.giphy.com/btj9kP7zE8Ol2.gif)
+
 ## Directives You Might Use
 | Name | Description |
 | ---- | ----------- |
@@ -29,6 +31,7 @@ Set the `ng-switch-when` tag on each of the divs inside the `content` div, provi
 	<div class="col-md-1 menu" ng-class="{active: tab == 'Angular'}" ng-click="tab='Angular'"><b>Angular</b></div>
 	<div class="col-md-1 menu" ng-class="{active: tab == 'Jquery'}" ng-click="tab='Jquery'"><b>Jquery</b></div>
 	<div class="col-md-1 menu" ng-class="{active: tab == 'Bootstrap'}" ng-click="tab='Bootstrap'"><b>Bootstrap</b></div>
+	<div class="col-md-1 menu" ng-class="{active: tab == null || tab == ''}" ng-click="tab=''"><b>Other</b></div>
 </div>
 <div id="content" class="row" ng-switch="tab">
 	<div class="col-md-4" style="background-color:yellow" ng-switch-when="Angular">
