@@ -1,6 +1,7 @@
 # Goal
 Initialize the country \<select> to India, and set the options for the state \<select> without cluttering the html with a ton of \<option> tags. You'll want to use an Angular filter (like the one already being used on the State `ng-model`) to make sure you're only providing options that correspond to the selected Country.
 
+![Result](http://i.giphy.com/hOTuAPDE7gkz6.gif)
 
 ## Directives You Might Use
 | Name | Description |
