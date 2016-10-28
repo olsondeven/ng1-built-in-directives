@@ -10,8 +10,8 @@
 		<div class="row text-center">
 			<div class="col-md-12">
 				<br />
-				<button class="btn btn-success">Details</button>
-				<button class="btn btn-success">Hide</button>
+				<button class="btn btn-success" ng-disabled="!visible" ng-click="slide()">Details</button>
+				<button class="btn btn-success" ng-disabled="visible" ng-click="slide()">Hide</button>
 				<br />
 				<div class="details" style="border: solid black">
 					<div style="padding:40px">
@@ -26,12 +26,12 @@
 	<hr>
 	<div>
 		Double click to select a winner: <br />
-		<select size="6" ng-model="winner" ng-options="employee as employee.name for employee in employees"></select>
+		<select size="6" ng-model="winner" ng-dblclick='dblClick(winner)' ng-options="employee as employee.name for employee in employees"></select>
 		<form>
 			<label>Employee Name: <input type="text" ng-model="chosen.name" required></label><br>
 			<label>Employee Email: <input type="email" ng-model="chosen.email" required></label><br>
 			<label>Years of Experience: <input type="text" ng-model="chosen.experience" required></label><br>
-			<button type="submit">Confirm Winner Selection</button>
+			<button type="submit" ng-click='submit(chosen.name)'>Confirm Winner Selection</button>
 		</form>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -40,7 +40,7 @@
 		app.controller('mainCtrl', ['$scope', function ($scope) {
 			$scope.slide = function () {
 				$('.details').slideToggle('slow')
-				
+				$scope.visible = !$scope.visible;
 			}
 
 			$scope.employees = [
@@ -50,7 +50,7 @@
 				{ name: 'Josh Mikelson' , email: 'josh@mikelson', experience: 3} ,
 				{ name: 'Stephanie Lewis', email: 'stephanie@lewis.com', experience: 4 }
 			];
-		
+
 			$scope.dblClick = function (employee) {
 				$scope.chosen = {
 					name: employee.name,
